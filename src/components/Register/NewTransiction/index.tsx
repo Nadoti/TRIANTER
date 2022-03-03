@@ -1,9 +1,13 @@
 import { Container } from "./styles";
 
-export function BtnNewTransiction() {
+interface HeaderProps {
+  onBtnOpenNewTransictionModal: () => void
+}
+
+export function BtnNewTransiction({onBtnOpenNewTransictionModal}: HeaderProps) {
   return (
     <Container>
-      <button>Novo Registro </button>
+      <button onClick={onBtnOpenNewTransictionModal}>Novo Registro </button>
     </Container>
   );
 }

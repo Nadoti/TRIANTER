@@ -31,7 +31,7 @@ export function Header() {
         <img src={logo} alt="Trianter" />
       </Link>
 
-      <Content onClick={teste} id="registro">
+      <Content className='ativo' onClick={teste} id="registro">
         <RegisterSvg />
         <Link to="/" >Register</Link> 
       </Content>

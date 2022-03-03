@@ -10,6 +10,12 @@ export const Container = styled.div`
     border: none;
     border-radius: 10px;
     background: var(--color-principal);
+
+    transition: filter 0.3s;
+
+    &:hover {
+      filter: brightness(.8);
+    }
   }
 
 
