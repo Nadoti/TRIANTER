@@ -7,9 +7,10 @@ import { Dashboard } from "./components/Dashboard";
 import { Analytics } from "./components/Analytics";
 import { useEffect, useState } from "react";
 import { api } from "./services/api";
-import Modal from 'react-modal'
+import { TransictionModal } from "./components/Modal";
 
-Modal.setAppElement("#root")
+
+
   
 
 export function App() {
@@ -38,9 +39,10 @@ export function App() {
           <Route path="dashboard" element={<Dashboard/>}/>
           <Route path="analytics" element={<Analytics/>}/>
         </Routes>
-        <Modal isOpen={isNewTransictionModalOpen} onRequestClose={handleCloseModalTransiction}>
-          <h2>Cadastrar</h2>
-        </Modal>
+        <TransictionModal  
+          isOpen={isNewTransictionModalOpen} 
+          onRequestClose={handleCloseModalTransiction}
+        />
       </Container>
       <GlobalStyle />
       
